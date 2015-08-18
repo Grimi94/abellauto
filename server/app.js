@@ -6,7 +6,18 @@
 
 var express = require('express');
 var config = { "port" : 8080 };
+var mysql = require('mysql');
 // Connect to database
+var connection = mysql.createConnection(
+    {
+      host     : 'localhost',
+      user     : 'root',
+      password : 'olalla',
+      database : 'talleres',
+    }
+);
+
+connection.connect();
 
 // Setup server
 var app = express();
@@ -14,10 +25,9 @@ var server = require('http').createServer(app);
 require('./express')(app);
 require('./routes')(app);
 
-
 // Start server
 server.listen(config.port, config.ip, function () {
-  console.log('Express server listening on %d', config.port));
+    console.log('Express server listening on %d', config.port));
 });
 
 // Expose app

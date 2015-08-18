@@ -21,13 +21,20 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" type="text/css" href="./style.css" />
-        <link rel="stylesheet" type="text/css" href="./bower_components/ng-table/dist/ng-table.css" />
-        <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
-        <script type="text/javascript" src="./bower_components/ng-table/dist/ng-table.js"></script>
+        <link rel="stylesheet" type="text/css" href="../bower_components/ng-table/dist/ng-table.css" />
+        <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="../bower_components/ng-table/dist/ng-table.js"></script>
         <title>Abellauto</title>
     </head>
+
+    <script type="text/javascript">
+        var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+        var f=new Date();
+        document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+    </script>
+    
     <body ng-controller="TableController">
-        <p align = "center" size="10"><font size="6">Lunes 1 de Enero</font></p>
+        <p align ="center" size="10"><font size="6">Lunes 1 de Enero</font></p>
         <table ng-table class="tab" border='0' cellpadding='0' cellspacing='0'>
                 <tr ng-repeat="order in orders">
                     <td class='time' data-title="'VEHÍCULO'">{{order.info}}</td>

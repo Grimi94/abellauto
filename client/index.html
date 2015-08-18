@@ -30,11 +30,11 @@
     <script type="text/javascript">
         var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
         var f=new Date();
-        document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+        document.write('<p align="center" size="10"><font size="6">' + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear()+'</p></font>'
+);
     </script>
-    
+
     <body ng-controller="TableController">
-        <p align ="center" size="10"><font size="6">Lunes 1 de Enero</font></p>
         <table ng-table class="tab" border='0' cellpadding='0' cellspacing='0'>
                 <tr ng-repeat="order in orders">
                     <td class='time' data-title="'VEHÍCULO'">{{order.info}}</td>

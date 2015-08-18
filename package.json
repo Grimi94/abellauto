@@ -2,10 +2,15 @@
   "name": "abellauto",
   "version": "1.0.0",
   "description": "Aplicacion informativa",
-  "main": "server.js",
+  "main": "./server/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Antonio,Kenji",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "mysql": "^2.8.0",
+    "path": "^0.11.14"
+  }
 }

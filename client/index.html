@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html ng-app="Abellauto">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <link rel="stylesheet" type="text/css" href="./bower_components/ng-table/dist/ng-table.css" />
+        <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="./bower_components/ng-table/dist/ng-table.js"></script>
+        <title>Abellauto</title>
+    </head>
+    <body ng-controller="TableController">
+        <p align = "center" size="10"><font size="6">Lunes 1 de Enero</font></p>
+        <table ng-table class="tab" border='0' cellpadding='0' cellspacing='0'>
+                <tr ng-repeat="order in orders">
+                    <td class='time' data-title="'VEHÍCULO'">{{order.info}}</td>
+                    <td class='esp green' data-title="'HOJALATERÍA'">{{order.hojalateria}}</td>
+                    <td class='esp' data-title="'MECANICA'">{{order.mecanica}}</td>
+                    <td class='esp' data-title="'PREAPARADO'">{{order.preparado}}</td>
+                    <td class='esp' data-title="'PINTURA'">{{order.pintura}}</td>
+                    <td class='esp' data-title="'ARMADO'">{{order.pintura}}</td>
+                    <td class='esp' data-title="'TOTs'">{{order.tot}}</td>
+                    <td class='esp' data-title="'DETALLADO'">{{order.detallado}}</td>
+                    <td class='esp' data-title="'PROGRAMACIÓN'">{{order.programacion}}</td>
+                    <td class='esp' data-title="'REPROCESO'">{{order.reproceso}}</td>
+                </tr>
+        </table>
+        <script type="text/javascript" src="js/controller.js"></script>
+    </body>
+</html>

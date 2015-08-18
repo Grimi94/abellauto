@@ -32,7 +32,7 @@ var getProcesses = function(order) {
     return "select proc, emp from ODT_PXO where clave = " + orden
 };
 
-var getModel = function(order) {
+var getModel = function(	order) {
     return "select descrip from ODT_SMCA where clave = " + order
 };
 

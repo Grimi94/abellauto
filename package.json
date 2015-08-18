@@ -2,7 +2,7 @@
   "name": "abellauto",
   "version": "1.0.0",
   "description": "Aplicacion informativa",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

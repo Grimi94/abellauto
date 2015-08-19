@@ -10,7 +10,7 @@ var path = require('path');
 var config = {};
 config.root = path.normalize(__dirname + '/../..');
 
-console.log(config);
+// console.log(config);
 
 module.exports = function(app) {
     // app.set('views', config.root + '/server/views');

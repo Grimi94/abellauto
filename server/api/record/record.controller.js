@@ -20,11 +20,61 @@ var getAlias = function(order) {
 };
 
 exports.index = function(req, res) {
-    connection.query(getCurrentOrders, function(err, rows, fields) {
-        if (err) throw err;
-        console.log('database response');
-        console.log(rows);
-        console.log(fields);
-        response.end(JSON.stringify(rows));
+    var orders = [];
+    orders.push({
+        info: "Cruze Negro Alicia 02300",
+        hojalateria: true,
+        mecanica: true,
+        preparado: true,
+        pintura: true,
+        armado: true,
+        tots: true,
+        detallado: true,
+        programacion: "LU-1",
+        reproceso: ""
+    },
+    {
+        info: "Kenji Negro Brown 02300",
+        hojalateria: true,
+        mecanica: true,
+        preparado: true,
+        pintura: true,
+        armado: true,
+        tots: true,
+        detallado: true,
+        programacion: "LU-1",
+        reproceso: ""
+    }
+    ,
+    {
+        info: "Kenji Black Brown 02300",
+        hojalateria: true,
+        mecanica: true,
+        preparado: true,
+        pintura: true,
+        armado: true,
+        tots: true,
+        detallado: true,
+        programacion: "LU-1",
+        reproceso: ""
     });
+
+    res.end(JSON.stringify(orders));
+
+    // connection.query(getCurrentOrders, function(err, rows, fields) {
+    //     if (err) throw err;
+    //     var orders = [];
+    //     for (var i = 0; i < rows.length; i++) {
+    //         var row = rows[i];
+    //         var order = {};
+    //         order.info = "" + row[2] + " " + row[1] + " " + row[4] + " " + row[0];
+    //         order.programacion = "" + row[5];
+    //         orders.push(order);
+    //     }
+    //
+    //     console.log('database response');
+    //     // console.log(rows);
+    //     // console.log(fields);
+    //     res.end(JSON.stringify(orders));
+    // });
 };
